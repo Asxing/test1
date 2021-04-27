@@ -24,7 +24,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_file: 'test1'
-          destination_repo: 'asxing/test1'
+          destination_repo: 'asxing/test2'
           destination_folder: 'test2'
           user_email: 'holddie@163.com'
           user_name: 'Asxing'
