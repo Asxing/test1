@@ -26,6 +26,6 @@ jobs:
           source_file: 'test1'
           destination_repo: 'asxing/test1'
           destination_folder: 'test2'
-          user_email: 'asxingyang@gmail.com'
-          user_name: 'asxing'
+          user_email: 'holddie@163.com'
+          user_name: 'Asxing'
           destination_branch: 'main'
