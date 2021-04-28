@@ -33,6 +33,7 @@ jobs:
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
           repository: asxing/test2
+          path: main1
       - uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
