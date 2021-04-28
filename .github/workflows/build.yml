@@ -28,7 +28,7 @@ jobs:
           destination_folder: 'test2'
           user_email: 'holddie@163.com'
           user_name: 'Asxing'
-          destination_branch_create: 'main1'
+          destination_branch: 'main1'
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
