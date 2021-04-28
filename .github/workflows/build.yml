@@ -33,9 +33,9 @@ jobs:
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
           repository: asxing/test2
+          ref: main1
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "main1"
           destination_branch: "main"
           github_token: ${{ secrets.GITHUB_TOKEN }}
