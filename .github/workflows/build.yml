@@ -29,17 +29,17 @@ jobs:
           user_email: 'holddie@163.com'
           user_name: 'Asxing'
           destination_branch: 'main1'
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.API_TOKEN_GITHUB }}
-          repository: asxing/test2
-          ref: 'main1'
-      - uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.API_TOKEN_GITHUB }}
-          branch: main1
-          base: main
-      - name: Check outputs
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+      # - uses: actions/checkout@v2
+      #   with:
+      #     token: ${{ secrets.API_TOKEN_GITHUB }}
+      #     repository: asxing/test2
+      #     ref: 'main1'
+      # - uses: peter-evans/create-pull-request@v3
+      #   with:
+      #     token: ${{ secrets.API_TOKEN_GITHUB }}
+      #     branch: main1
+      #     base: main
+      # - name: Check outputs
+      #   run: |
+      #     echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+      #     echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
