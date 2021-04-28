@@ -32,7 +32,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          repository: asxing/test2@main1
+          repository: asxing/test2
+          ref: 'main1'
       - uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
