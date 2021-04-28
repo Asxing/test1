@@ -17,29 +17,28 @@ jobs:
       matrix:
         node-version: [8.x]
     steps:
-      - uses: actions/checkout@v2
-      - name: Pushes test file
-        uses: asxing/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'test1111'
-          destination_repo: 'asxing/test2'
-          destination_folder: 'test2'
-          user_email: 'holddie@163.com'
-          user_name: 'Asxing'
-          destination_branch: 'main1'
       # - uses: actions/checkout@v2
+      # - name: Pushes test file
+      #   uses: asxing/copy_file_to_another_repo_action@main
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       #   with:
-      #     token: ${{ secrets.API_TOKEN_GITHUB }}
-      #     repository: asxing/test2
-      #     ref: 'main1'
-      # - uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     token: ${{ secrets.API_TOKEN_GITHUB }}
-      #     branch: main1
-      #     base: main
-      # - name: Check outputs
-      #   run: |
-      #     echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-      #     echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+      #     source_file: 'test1111'
+      #     destination_repo: 'asxing/test2'
+      #     destination_folder: 'test2'
+      #     user_email: 'holddie@163.com'
+      #     user_name: 'Asxing'
+      #     destination_branch: 'main1'
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          repository: asxing/test2
+      - uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          branch: main1
+          base: main
+      - name: Check outputs
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
