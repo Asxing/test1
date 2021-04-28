@@ -42,4 +42,4 @@ jobs:
       with:
         source_branch: fea123
         destination_branch: main
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.API_TOKEN_GITHUB }}
