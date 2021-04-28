@@ -33,13 +33,9 @@ jobs:
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
           repository: asxing/test2
-          path: main1
-      - uses: peter-evans/create-pull-request@v3
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
         with:
-          token: ${{ secrets.API_TOKEN_GITHUB }}
-          branch: main1
-          base: main
-      - name: Check outputs
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+          source_branch: "main1"
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
