@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Pushes test file
-        uses: dmnemec/copy_file_to_another_repo_action@main
+        uses: asxing/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -28,7 +28,7 @@ jobs:
           destination_folder: 'test2'
           user_email: 'holddie@163.com'
           user_name: 'Asxing'
-          destination_branch: 'main1'
+          destination_branch_create: 'main1'
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
