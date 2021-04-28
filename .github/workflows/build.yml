@@ -23,7 +23,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: 'test1'
+          source_file: 'test1111'
           destination_repo: 'asxing/test2'
           destination_folder: 'test2'
           user_email: 'holddie@163.com'
