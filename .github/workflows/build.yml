@@ -19,10 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          persist-credentials: false
           token: ${{ secrets.API_TOKEN_GITHUB }}
-      - run: |
-          git config user.name zege
-          git config user.email holddie@qq.com
       - name: Pushes test file
         uses: asxing/copy_file_to_another_repo_action@main
         env:
