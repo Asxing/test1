@@ -19,7 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          repository: asxing/test1
+#           persist-credentials: false
       - name: Pushes test file
         uses: asxing/copy_file_to_another_repo_action@main
         env:
