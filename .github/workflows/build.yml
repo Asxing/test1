@@ -18,28 +18,28 @@ jobs:
         node-version: [8.x]
     steps:
       - uses: actions/checkout@v2
-      # - name: Pushes test file
-      #   uses: asxing/copy_file_to_another_repo_action@main
-      #   env:
-      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      #   with:
-      #     source_file: 'test1111'
-      #     destination_repo: 'asxing/test2'
-      #     destination_folder: 'test2'
-      #     user_email: 'holddie@163.com'
-      #     user_name: 'Asxing'
-      #     destination_branch: 'main1'
-  pull-request:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        repository: asxing/test2
-        ref: fea123
-    - name: pull-request
-      uses: repo-sync/pull-request@v2
-      with:
-        source_branch: fea123
-        destination_branch: main
-        github_token: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Pushes test file
+        uses: asxing/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'test1111'
+          destination_repo: 'asxing/test2'
+          destination_folder: 'test2'
+          user_email: 'holddie@qq.com'
+          user_name: 'zege'
+          destination_branch: 'main1'
+#   pull-request:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         token: ${{ secrets.API_TOKEN_GITHUB }}
+#         repository: asxing/test2
+#         ref: fea123
+#     - name: pull-request
+#       uses: repo-sync/pull-request@v2
+#       with:
+#         source_branch: fea123
+#         destination_branch: main
+#         github_token: ${{ secrets.API_TOKEN_GITHUB }}
